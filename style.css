@@ -1,0 +1,30 @@
+body {
+  width: 100%;
+}
+
+.inline {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .inline {
+    width: 100%;
+  }
+}
+
+.txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .txt {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,29 @@
+$breakpoints: (
+  'sm': 'screen and (max-width: 400px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+body{
+    width: 100%;
+}
+.inline{
+        width: 80%;
+        margin: 0 auto  ;
+        @include mq(md){
+            width: 100%;
+        }
+}
+ .txt{
+     display: flex;
+     justify-content: space-between;
+     @include mq(md){
+        display: block;
+
+    }
+}
